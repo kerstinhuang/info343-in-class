@@ -1,0 +1,52 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    padding: 1em;
+}
+
+.icon-link {
+    color: #333;
+
+}
+
+.icon-link:hover {
+    color: #f00;
+}
+
+.button-link {
+    color: #333;
+    /* text decoration: none gets rid of the underline,replacing none with underline gets the line back */
+    text-decoration: none;
+    /* this creates the border of your button */
+    border-width: 1px;
+    border-style: solid;
+    border-color: #222;
+    /* adds curvature to button*/
+    border-radius: 4px;
+    /* em = realtive to the height of the current font  */
+    padding: 0.5em 1em;
+     /* animates color change on hover*/
+    transition: all 500ms;
+}
+
+.button-link:hover{
+     /* changes background color of the button when it's hovered  */
+    background-color: #aaa;
+     /* changes word color when it's hovered */
+    color: #fff;
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+.fadeIn{
+    animation-name: fadeIn;
+    animation-duration: 1s;
+}
