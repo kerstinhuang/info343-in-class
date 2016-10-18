@@ -90,7 +90,7 @@ searchInput.addEventListener("input", function(){
 // click on header
 var countColHeading = document.getElementById("count-col-header");
 countColHeading.addEventListener("click", function() {
-    console.log("click col header!");
-    // BABYNAMES.sort(descending(compareByCount));
-    // render(BABYNAMES);
+    // console.log("click col header!");
+    BABYNAMES.sort(descending(compareByCount));
+    render(BABYNAMES);
 });
