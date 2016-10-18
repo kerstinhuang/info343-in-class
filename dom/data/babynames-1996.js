@@ -1,3 +1,4 @@
+// var babynames = array of objects = hash maps
 var BABYNAMES = [
     {
         "name": "Aadam",
