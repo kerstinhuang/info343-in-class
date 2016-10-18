@@ -1,0 +1,21 @@
+body{
+    padding: 30px;
+    padding-top: 5px;
+}
+
+
+p2{
+    float: right;
+}
+
+
+.background {
+    background-image: url(../img/workspace.jpg); 
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+}
+
