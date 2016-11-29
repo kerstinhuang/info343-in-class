@@ -110,10 +110,8 @@ logValue("2016-10-27", formatAsDate);
 var someNumber = 123456789;
 //logValue(...)
 
-
-
-
-
+logValue(someNumber, formatAsNumber);
+logValue(someNumber, formatAsCurrency);
 
 console.groupEnd();
 
@@ -139,7 +137,7 @@ var course = {
 };
 
 console.log("I'm taking", course.curriculum, course.num);
-
+//course["curriculum]
 //if we want to access a property's value and we have
 //that property name in a string variable, we can do 
 //that using an alternative syntax:
@@ -190,12 +188,9 @@ console.log("property names:", propNames);
  * see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
  */
 
-
-
-
-
-
-
+propNames.forEach(function(name){
+    console.log(name, "=", course[name] )
+});
 
 //FYI, this is essentially how the .forEach()
 //method on arrays is implemented:
@@ -351,7 +346,16 @@ console.log("Total count", formatAsNumber(totalCount));
  * just reverse the logic in your compare function.
  */
 
+males.sort(function(record1, record2) {
+    return -(record1.count - record2.count); // or record2.count - record1.count
+});
+var topMaleNames = males.slice(0,10);
+console.log("most popular males records", topMaleNames)
+topMaleNames = topMaleNames.map(function(record) {
+    return record.name;
+});
 
+console.log("most popular male names:", topMaleNames.join(", "));
 
 /**
  * PRACTICE
@@ -368,9 +372,5 @@ console.log("Total count", formatAsNumber(totalCount));
  * data by total count descending, slice off the 
  * top 10 and write those to the console.
  */
-
-
-
-
 
 console.groupEnd();
